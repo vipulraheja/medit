@@ -55,7 +55,7 @@ Due to the quality, we only publicly release the best-performing model checkpoin
 | :-------------|:-------------  |
 | mEdIT-large (TBA)    | 1.2B  | 
 | mEdIT-xl (TBA)    | 7B  | 
-| [mEdIT-xxl] (https://huggingface.co/grammarly/medit-xxl)    | 13B  | 
+| [mEdIT-xxl](https://huggingface.co/grammarly/medit-xxl)    | 13B  | 
 
 
 #### Example Usage:
