@@ -64,8 +64,9 @@ You can directly load our models using [Hugging Face Transformers](https://githu
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 tokenizer = AutoTokenizer.from_pretrained("grammarly/medit-xxl")
-model = T5ForConditionalGeneration.from_pretrained("grammarly/medit-xxl")
+model = AutoModelForCausalLM.from_pretrained("grammarly/medit-xxl")
 
+# English GEC using Japanese instructions
 input_text = '### 命令:\n文章を文法的にする\n### 入力:\nI has small cat ,\n### 出力:\n\n'
 inputs = tokenizer(input_text, return_tensors="pt")
 outputs = model.generate(**inputs, max_length=20)
