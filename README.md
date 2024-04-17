@@ -51,10 +51,10 @@ Details about the added keywords ("Instruction", "Input", "Output") can be found
 * `lang`: Language code in ISO-639-1
 * `dataset`: Source of the current example
 * `task`: Text editing task for this instance
-* `src`: input text (formatted as `instruction: input_text`)
+* `src`: input text 
+* `refs`: reference texts
+* `tgt`: output text
 * `prompt`: Full prompt (instruction + input) for training the models
-* `text`: output text
-
 
 Please note that this dataset contains 102k instances (as opposed to the 190k instances we used in the paper to train our models). This is because this public release includes only the instances that were acquired and curated from publicly available datasets. More details on dataset sources can be found in the paper or on the [Hugging Face Dataset card](https://huggingface.co/datasets/grammarly/medit). 
 
