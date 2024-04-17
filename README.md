@@ -60,9 +60,9 @@ Please note that this dataset contains 102k instances (as opposed to the 190k in
 
 ## Code
 ### Training
-Script for the `mEdIT-xxl` model. 
+We provide a minimal script for training the `mEdIT-xl` model. We use the standard [SFTTrainer](https://huggingface.co/docs/trl/en/sft_trainer) from Hugging Face.
 ```
-sh train/train_medit_xxl.sh
+sh train/train_medit_xl_minimal.sh
 ```
 All other models models can be trained by making the corresponding changes to this script. 
 
