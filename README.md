@@ -20,23 +20,43 @@ Our code is based on Hugging Face `transformers`.
 
 ## Data
 Available on [Hugging Face](https://huggingface.co/datasets/grammarly/medit).
-Example data point:
+
+### Example data point:
 
 ```
 {
-  "instance":867453,
+  "instance":999999,
   "task":"gec",
   "language":"english",
   "lang":"en",
   "dataset":"lang8.bea19",
   "src":"Fix grammar in this sentence: Luckily there was no damage for the earthquake .",
-  "full_prompt":"### 命令:\nこの文の文法上の誤りを修正してください\n### 入力:\nLuckily there was no damage for the earthquake .\n### 出力:\n\nLuckily there was no damage from the earthquake two years ago .",
-  "prompt":"### 命令:\nこの文の文法上の誤りを修正してください\n### 入力:\nLuckily there was no damage for the earthquake .\n### 出力:\n\n",
-  "text":"Luckily there was no damage from the earthquake two years ago ."
+  "refs": ['Luckily there was no damage from the earthquake .'],
+  "tgt":"Luckily there was no damage from the earthquake .",
+  "prompt":"この文の文法上の誤りを修正してください: Luckily there was no damage for the earthquake .",
 }
 ```
 
-Please note that this dataset contains XX instances (as opposed to the XX instances we used in the paper). This is because this public release includes only the instances that were acquired and curated from publicly available datasets. Specifically, it is missing roughly XX instances in training and XX instances in validation data from Simplification and Formality Transfer tasks due to licensing restrictions.
+Note that for the mEdIT models, the `prompt` was formatted as follows: 
+(e.g. for a Japanese-prompted editing for English text)
+```
+### 命令:\nこの文の文法上の誤りを修正してください\n### 入力:\nLuckily there was no damage for the earthquake .\n### 出力:\n\n
+```
+Details about the added keywords ("Instruction", "Input", "Output") can be found in the Appendix or on the mEdIT model cards. 
+
+
+### Data Fields
+* `instance`: instance ID
+* `language`: Language of input and edited text 
+* `lang`: Language code in ISO-639-1
+* `dataset`: Source of the current example
+* `task`: Text editing task for this instance
+* `src`: input text (formatted as `instruction: input_text`)
+* `prompt`: Full prompt (instruction + input) for training the models
+* `text`: output text
+
+
+Please note that this dataset contains 102k instances (as opposed to the 190k instances we used in the paper to train our models). This is because this public release includes only the instances that were acquired and curated from publicly available datasets. More details on dataset sources can be found in the paper or on the [Hugging Face Dataset card](https://huggingface.co/datasets/grammarly/medit). 
 
 ## Code
 ### Training
