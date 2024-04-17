@@ -30,7 +30,7 @@ Available on [Hugging Face](https://huggingface.co/datasets/grammarly/medit).
   "language":"english",
   "lang":"en",
   "dataset":"lang8.bea19",
-  "src":"Fix grammar in this sentence: Luckily there was no damage for the earthquake .",
+  "src":"Luckily there was no damage for the earthquake .",
   "refs": ['Luckily there was no damage from the earthquake .'],
   "tgt":"Luckily there was no damage from the earthquake .",
   "prompt":"この文の文法上の誤りを修正してください: Luckily there was no damage for the earthquake .",
