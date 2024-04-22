@@ -1,0 +1,22 @@
+TRAIN_DATASET_PATH="./train_sample.jsonl"
+VALID_DATASET_PATH="./valid_sample.jsonl"
+OUTPUT_MODEL_PATH="./model_output_sample/"
+MODEL_NAME="MBZUAI/bactrian-x-llama-7b-merged"
+LEARNING_RATE=5e-5
+BATCH_SIZE=4
+SEQ_LENGTH=256
+NUM_EPOCHS=2
+GRADIENT_ACCUMULATION_STEPS=4
+SAVE_TOTAL_LIMIT=4
+
+accelerate-launch medit_trainer.py --train_dataset_name=${TRAIN_DATASET_PATH} \
+  --valid_dataset_name=${VALID_DATASET_PATH} \
+  --output_dir=${OUTPUT_MODEL_PATH} \
+  --model_name=${MODEL_NAME} \
+  --learning_rate=${LEARNING_RATE} \
+  --batch_size=${BATCH_SIZE} \
+  --seq_length=${SEQ_LENGTH} \
+  --num_train_epochs=${NUM_EPOCHS} \
+  --gradient_accumulation_steps=${GRADIENT_ACCUMULATION_STEPS} \
+  --save_total_limit=${SAVE_TOTAL_LIMIT} \
+  --use_peft=True
