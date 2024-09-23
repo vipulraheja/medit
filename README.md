@@ -98,13 +98,24 @@ print(edited_text)
 
 ## Citation
 ```
-@article{raheja2023medit,
-      title={mEdIT: Multilingual Text Editing via Instruction Tuning}, 
-      author={Vipul Raheja and Dimitris Alikaniotis and Vivek Kulkarni and Bashar Alhafni and Dhruv Kumar},
-      url={https://arxiv.org/abs/2402.16472v1},
-      year={2024},
-      eprint={2402.16472},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{raheja-etal-2024-medit,
+    title = "m{E}d{IT}: Multilingual Text Editing via Instruction Tuning",
+    author = "Raheja, Vipul  and
+      Alikaniotis, Dimitris  and
+      Kulkarni, Vivek  and
+      Alhafni, Bashar  and
+      Kumar, Dhruv",
+    editor = "Duh, Kevin  and
+      Gomez, Helena  and
+      Bethard, Steven",
+    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = jun,
+    year = "2024",
+    address = "Mexico City, Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.naacl-long.56",
+    doi = "10.18653/v1/2024.naacl-long.56",
+    pages = "979--1001",
+    abstract = "We introduce mEdIT, a multi-lingual extension to CoEdIT {--} the recent state-of-the-art text editing models for writing assistance. mEdIT models are trained by fine-tuning multi-lingual large, pre-trained language models (LLMs) via instruction tuning. They are designed to take instructions from the user specifying the attributes of the desired text in the form of natural language instructions, such as {``}Grammatik korrigieren{''} (German) or {``}이 텍스 트를 단순화{''} (Korean). We build mEdIT by curating data from multiple publicly available human-annotated text editing datasets for three text editing tasks (Grammatical Error Correction (GEC), Text Simplification, and Paraphrasing) across diverse languages belonging to six different language families. We detail the design and training of mEdIT models and demonstrate their strong performance on many multi-lingual text editing benchmarks against other multilingual LLMs. We also find that mEdIT generalizes effectively to new languages over multilingual baselines. We publicly release our data, code, and trained models.",
 }
 ```
